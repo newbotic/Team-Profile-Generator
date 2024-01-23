@@ -1,143 +1,71 @@
 # Team-Profile-Generator
-# Module 12 Object-Oriented Programming: Team Profile Generator
 
-## Your Task
+Welcome to the Weather-Dashboard repository!
 
-Your task is to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. You have been provided with tests, so make sure every part of your code passes each provided test.
+## Table of content
 
-## User Story
+[About](#about)
+[Features](#features)
+[Technologies used](#technologies-used)
+[Screenshot](#screenshot)
+[Link to deployed app](#link-to-deployed-app)
+[License](#license)
+[Getting Started](#getting-started)
+[Prerequisites](#prerequisites)
+[Contributing](#contributing)
 
-As a manager a user want to generate a webpage that displays my team's basic info so that a user have quick access to their emails and GitHub profiles.
+## About
 
-## Instructions
+Team-Profile-Generator is an easy-to-use tool that helps you create web pages without the hassle of writing complicated code. Our app uses Node.js, a fast and flexible technology, along with Inquirer for simple input, and Jest for making sure everything works smoothly.
 
-* Create a command-line application that accepts accepts user input using the provided starter code.   
-  * Create classes for each team member provided and export them. The tests for these classes (in the `_tests_` directory) must ALL pass.     
-    * The first class is an `Employee` parent class with the following properties and methods:       
-      * `name`
-      * `id`
-      * `email`
-      * `getName()`
-      * `getId()`
-      * `getEmail()`
-      * `getRole()`&mdash;returns `'Employee'`     
-    * The other three classes will extend `Employee`.      
-    * In addition to `Employee`'s properties and methods, `Manager` will also have the following:
-      * `officeNumber`
-      * `getRole()`&mdash;overridden to return `'Manager'`
-    * In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
-      * `github`&mdash;GitHub username
-      * `getGithub()`
-      * `getRole()`&mdash;overridden to return `'Engineer'`
-    * In addition to `Employee`'s properties and methods, `Intern` will also have the following:
-      * `school`
-      * `getSchool()`
-      * `getRole()`&mdash;overridden to return `'Intern'`
-    * Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.   
-  * Write code in `index.js` that uses inquirer to gather information about the development team members and creates objects for each team member using the correct classes as blueprints.
-    * When a user starts the application then they are prompted to enter the **team manager**’s:
-      * Name
-      * Employee ID
-      * Email address
-      * Office number
-    * When a user enters those requirements then the user is presented with a menu with the option to:
-      * Add an engineer
-      * Add an intern 
-      * Finish building the team
-    * When a user selects the **engineer** option then a user is prompted to enter the following and then the user is taken back to the menu:
-      * Engineer's Name
-      * ID
-      * Email
-      * GitHub username
-    * When a user selects the intern option then a user is prompted to enter the following and then the user is taken back to the menu:
-      * Intern’s name
-      * ID
-      * Email
-      * School
-    * When a user decides to finish building their team then they exit the application, and the HTML is generated.
-  * Call the `render` function (provided for you) and pass in an array containing all employee objects; 
-    * The `render` function will generate and return a block of HTML including templated divs for each employee!
-  * Create an HTML file using the HTML returned from the `render` function. 
-    * Write it to a file named `team.html` in the `output` folder. 
-    * You can use the provided variable `outputPath` to target this location.
+## Features
 
----
+Simple and Fast:
+Our app is built on Node.js, which makes it quick and responsive. It can handle many tasks, making it perfect for creating web pages effortlessly.
 
-## Mock-Up
+Easy Input with Inquirer:
+Inquirer makes things easy. It asks you questions to get the information it needs, guiding you through the process of creating a web page. No need to worry about writing code – our app does it for you!
 
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
+Create Web Pages Easily:
+[App Name] is great at turning your answers into well-organized web page code. Whether your project is big or small, our app ensures that the code it creates is neat and easy to understand.
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/14-object-oriented-programming-challenge-demo.png)
+Reliability with Jest Testing:
+We want to make sure our app works well every time. That's why we use Jest to test it thoroughly. This means you can trust [App Name] to work smoothly without any unexpected problems.
 
-The styling in the image is just an example, so feel free to add your own.
+## Technologies used
 
----
+Node.js, inquirer, jest
+
+## Screenshot
+
+![Screenshot](./images/demo.png)
+
+## Link to deployed app
+
+https://github.com/newbotic/Team-Profile-Generator
+
+## License
+
+Mit license
 
 ## Getting Started
 
-This Challenge will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help get started.
+Install the Basics:
+Make sure you have Node.js installed. Just type npm install to get everything you need.
 
-Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
+Run the App:
+Start the app by typing node index.js. Answer the questions that Inquirer asks to tell the app what you want.
 
-```bash
-node index.js
-```
+Get Your Web Page:
+Once you've answered the questions, Team-Profile-Generator will create the code for your web page based on your answers.
 
----
+Test it Out:
+For those who like to check everything, run tests by typing npm run test to make sure everything is working as it should.
 
-## Hints
+## Prerequisites
 
-* You will want to make your methods as pure as possible. This means try to make your methods simple so that they are easier to test.
+Web browser (e.g., Chrome, Firefox) Code editor (optional)
 
-* The different employee types should all inherit some methods and properties from a base class of `Employee`.
- 
-* Be sure to test out each class and verify it generates an object with the correct structure and methods. This structure will be crucial in order for the provided `render` function to work!
-  
-* You may need to check if the `output` folder exists and create it if it does not.
+## Contributing
 
----
-
-## Grading Requirements
-
-This Challenge is graded based on the following criteria: 
-
-### Deliverables: 25%
-
-* A sample HTML file generated using the application must be submitted.
-
-* Your GitHub repository containing your application code.
-
-### Technical Acceptance Criteria: 50%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-	* All tests pass using the [Jest package](https://www.npmjs.com/package/jest).
-
-  * The application must have `Employee`, `Manager`, `Engineer`, and `Intern` classes.
-
-### Repository Quality: 25%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality readme with description.
-
----
-
-## Review
-
-You are required to submit the following for review:
-
-* A sample HTML file generated using your application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Contributions are welcome! Feel free to submit issues or pull requests.
